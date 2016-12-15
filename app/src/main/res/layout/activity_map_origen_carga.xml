@@ -1,0 +1,147 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator_layout"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.MapOrigenCarga">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarCargaOrigen"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+
+                >
+
+               <!-- <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="FastTrack"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />-->
+
+                <!--<ImageView
+                    android:id="@android:id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/imagetoolbar" />-->
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="6dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="6dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteEditTextDireccionOrigen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite su dirección"
+        android:inputType="textMultiLine"
+       />
+        <ProgressBar
+            android:id="@+id/progressBarEsperaDireccionOrigen"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/autoCompleteEditTextDireccionOrigen"
+            android:layout_alignBottom="@id/autoCompleteEditTextDireccionOrigen"
+            android:layout_alignRight="@id/autoCompleteEditTextDireccionOrigen"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+   <!-- <Button
+        android:id="@+id/pickerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:text="Find"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />-->
+
+   <!-- <ImageButton
+        android:id="@+id/ImageButton01"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/places_ic_search"
+        android:visibility="gone"
+        />-->
+
+
+</LinearLayout>
+
+
+        <!-- Map and ImageView in center for simulating the map marker -->
+        <RelativeLayout
+            android:id="@+id/confirm_address_map_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.ingenia.appacarreo.Activity.MapOrigenCarga"
+               />
+
+            <!-- Image View that acts as map marker notice centerInParent-->
+            <ImageView
+                android:id="@+id/confirm_address_map_custom_marker"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/marker"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡PEDIRLO AQUI!"
+                android:background="@drawable/css_buttons"
+                android:textColor="@color/blanco"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/buttonCargaOrigen" />
+        </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
+

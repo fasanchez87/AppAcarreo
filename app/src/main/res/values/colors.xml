@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#16AB95</color>
+    <color name="colorPrimaryDark">#2C8477</color>
+    <color name="colorAccent">#FFCD2D</color>
+    <!-- Mis colores -->
+    <color name="azulTendency">#1546A5</color>
+    <color name="blanco">#fff</color>
+    <color name="grisApp">#AFC4CF</color>
+    <color name="verdeApp">#16AB95</color>
+    <color name="AmarilloApp">#FFCD2D</color>
+    <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorRojoErrores">#f40202</color>
+    <color name="colorLetra">#f8919090</color>
+    <color name="descripcionLetra">#999999</color>
+    <color name="colorBotonPresionado">#FCD965</color>
+    <color name="colorBotonSinPresionar">#FFCD2D</color>
+</resources>
