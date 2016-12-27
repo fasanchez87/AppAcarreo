@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Fragments.SolicitarServicioCliente"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+   <!-- <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarServicio"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="true"
+            android:background="#ffffff"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSubtotalesTotalesServicios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+
+                >
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/logo_carga_app_modificado"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/btnAceptar"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView android:text="Información de Servicio"
+                    android:layout_width="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blanco"
+                    android:background="@color/verdeApp"
+                    android:layout_marginTop="0dp"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:id="@+id/txtTitulo" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fecha Servicio"
+                    android:id="@+id/editTextFechaServicio"
+                    android:focusable="false"
+
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Hora Servicio"
+                    android:focusable="false"
+                    android:id="@+id/editTextHoraServicio"
+
+                    />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Dirección Origen"
+                    android:focusable="false"
+                    android:id="@+id/editTextDireccionOrigenServicio"
+
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:focusable="false"
+                    android:hint="Dirección Destino"
+                    android:id="@+id/editTextDestinoServicioServicio"
+                    android:layout_marginTop="2dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tipo Carga"
+                    android:id="@+id/lblTipoCarga"
+                    android:textColor="@color/verdeApp"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerTipoCarga"
+                    android:layout_toRightOf="@+id/lblTipoCarga"
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tipo Vehículo"
+                    android:id="@+id/lblTipoVehiculo"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/verdeApp"
+                    />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerTipoVehiculo"
+                    android:layout_toRightOf="@+id/lblTipoVehiculo"
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:text="Adicionales"
+                    android:layout_width="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blanco"
+                    android:background="@color/verdeApp"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:id="@+id/lblAdicionales" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="2"
+                    android:hint="¿Nesecita auxiliares extra?"
+                    android:id="@+id/editTextCantidadAuxiliares"
+                    />
+
+
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Requiere Embalaje"
+                    android:id="@+id/checkEmbalaje"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCalcularAcarreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:text="CALCULAR TOTAL"
+            android:background="@drawable/css_buttons"
+            android:textColor="@color/blanco"
+            android:id="@+id/buttonCalcularAcarreo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutValorTotalAcarreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/linearLASDASDayoutValorTotalAcarreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/textViewTotaxxlServiciosSeleccionados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="TOTAL ACARREO:"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlanco"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/textViewTotalAcarreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorBlanco"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lineadfsdfsfrLayoutValorTotalAcarreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/textViewTotaxxlERWServiciosSeleccionados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="KILOMETRAJE:"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlanco"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/textViewTotalKilometrosAcarreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorBlanco"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+
+</LinearLayout >

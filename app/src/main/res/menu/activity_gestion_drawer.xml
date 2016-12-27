@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Mis opciones"
+        >
+        <menu>
+            <group
+                android:id="@+id/group_1"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_solicitar_servicio"
+                    android:title="Solicitar Servicio"/>
+                <item
+                    android:id="@+id/nav_historial_servicio_cliente"
+                    android:title="Historial Servicio" />
+                <item
+                    android:id="@+id/nav_servicios_disponibles"
+                    android:title="Servicios Disponibles" />
+                <item
+                    android:id="@+id/nav_servicios_agendados_conductor"
+                    android:title="Servicios Agendados" />
+                <item
+                    android:id="@+id/nav_historial_servicio_conductor"
+                    android:title="Historial Servicio" />
+                <!--<item
+                    android:id="@+id/nav_historial_servicios"
+                    android:title="Historial Servicios" />
+               <item
+                    android:id="@+id/nav_servicios_agendados"
+                    android:title="Servicios Agendados"
+                    android:visible="true"/>
+                <item
+                    android:id="@+id/nav_quiero_ser_esteticista"
+                    android:title="Trabaje con nosotros" />
+
+                <item
+                    android:id="@+id/nav_soporte"
+                    android:title="Soporte" />-->
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Conductor" android:visible="false">
+        <menu>
+           <!-- <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_activar_geolocalizacion"
+                    app:actionViewClass="android.support.v7.widget.SwitchCompat"
+                    app:showAsAction="always"
+                    android:title="Servicios Disponibles" />
+            </group>-->
+           <!-- <item
+                android:id="@+id/nav_servicios_disponibles"
+                android:title="Servicios Disponibles" />
+            <item
+                android:id="@+id/nav_historial_servicio_conductor"
+                android:title="Historial Servicio" />-->
+        </menu>
+    </item>
+
+    <item android:title="Mi cuenta"
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!--<item
+                    android:id="@+id/nav_configuracion"
+                    android:title="Configuración" />
+                <item
+                    android:id="@+id/nav_terminos_condiciones"
+                    android:title="Términos y Condiciones" />-->
+                <item
+                    android:id="@+id/nav_cerrar_sesion"
+                    android:title="Cerrar Sesión" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

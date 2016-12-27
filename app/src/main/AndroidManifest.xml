@@ -45,8 +45,15 @@
             android:label="Origen Carga" />
         <activity
             android:name=".Activity.MapDestinoCarga"
-            android:label="Destino Carga"></activity>
-        <activity android:name=".Activity.Conductor"></activity>
+            android:label="Destino Carga" />
+        <activity android:name=".Activity.Conductor" />
+        <activity android:name=".Activity.Inicio" />
+        <activity
+            android:name=".Activity.ConfirmarServicioConductor"
+            android:label="Gestión Servicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.InicioServicioConductor"
+            android:label="Gestión Servicio"></activity>
     </application>
 
 </manifest>

@@ -186,7 +186,7 @@ private void _webServiceRegistroCliente()
                             AlertDialog.Builder builder = new AlertDialog.Builder(Registro.this);
                             builder
                                     .setTitle("REGISTRO CLIENTE")
-                                    .setMessage("El registro de Cliente ha sido exitoso, proceda al ingreso del App.")
+                                    .setMessage("El registro de SolicitarServicioCliente ha sido exitoso, proceda al ingreso del App.")
                                     .setPositiveButton("Aceptar", new DialogInterface.OnClickListener()
                                     {
                                         @Override

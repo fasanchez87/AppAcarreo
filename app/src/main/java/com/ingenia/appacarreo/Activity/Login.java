@@ -144,7 +144,7 @@ public class Login extends AppCompatActivity
 
     public void cargarActivitys()
     {
-        if(sharedPreferences.getString("indicaConducto").equals("0"))
+       /* if(sharedPreferences.getString("indicaConducto").equals("0"))
         {
             Intent intent = new Intent(Login.this, Servicio.class);
             startActivity(intent);
@@ -155,11 +155,16 @@ public class Login extends AppCompatActivity
 
         if(sharedPreferences.getString("indicaConducto").equals("1"))
         {
-            Intent intent = new Intent(Login.this, Conductor.class);
+            Intent intent = new Intent(Login.this, ServicioDisponibleConductor.class);
             startActivity(intent);
             sharedPreferences.putBoolean("GuardarSesion", true);
             Login.this.finish();
         }
+*/
+        Intent intent = new Intent(Login.this, Inicio.class);
+        startActivity(intent);
+        sharedPreferences.putBoolean("GuardarSesion", true);
+        Login.this.finish();
 
     }
 
@@ -283,12 +288,16 @@ public class Login extends AppCompatActivity
                                 //DATOS DEL USUARIO EN BD LOCAL
                                 sharedPreferences.putString("codigoTercerox",usuario.getString("codigoTercerox"));
                                 sharedPreferences.putString("emailxTercerox",usuario.getString("emailxTercerox"));
+                                sharedPreferences.putString("nombreUsuario",usuario.getString("nombre"));
                                 sharedPreferences.putString("indicaClientex",usuario.getString("indicaClientex"));
                                 sharedPreferences.putString("indicaConducto",usuario.getString("indicaConducto"));
+                                sharedPreferences.putString("codigoVehclase",usuario.getString("codigoVehclase"));
+                                sharedPreferences.putString("numeroPlacaxxx",usuario.getString("numeroPlacaxxx"));
                                 sharedPreferences.putString("MyToken",usuario.getString("MyToken"));
 
                                 Log.i("MyToken",""+sharedPreferences.getString("MyToken"));
                                 Log.i("MyToken","codigoTercerox"+sharedPreferences.getString("codigoTercerox"));
+                                Log.i("codigoVehclase","codigoVehclase: "+sharedPreferences.getString("codigoVehclase"));
 
 
                                 //AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
@@ -300,7 +309,7 @@ public class Login extends AppCompatActivity
                                 //  public void onClick(DialogInterface dialog, int id)
                                 //{
 
-                                if(sharedPreferences.getString("indicaConducto").equals("0"))
+                                /*if(sharedPreferences.getString("indicaConducto").equals("0"))
                                 {
                                     Intent intent = new Intent(Login.this, Servicio.class);
                                     startActivity(intent);
@@ -312,11 +321,16 @@ public class Login extends AppCompatActivity
 
                                 if(sharedPreferences.getString("indicaConducto").equals("1"))
                                 {
-                                    Intent intent = new Intent(Login.this, Conductor.class);
+                                    Intent intent = new Intent(Login.this, ServicioDisponibleConductor.class);
                                     startActivity(intent);
                                     sharedPreferences.putBoolean("GuardarSesion", true);
                                     Login.this.finish();
-                                }
+                                }*/
+
+                                Intent intent = new Intent(Login.this, Inicio.class);
+                                startActivity(intent);
+                                sharedPreferences.putBoolean("GuardarSesion", true);
+                                Login.this.finish();
 
 
 
